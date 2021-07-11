@@ -4,15 +4,93 @@
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta author="eanorambuena, reveal.js, electron">
+  
     <title>Pyfoch Egg</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
+    <link rel="stylesheet" href="reveal/dist/reset.css">
+		<link rel="stylesheet" href="reveal/dist/reveal.css">
+		<link rel="stylesheet" href="reveal/dist/theme/black.css">
+
+		<!-- headers and boxes configuration -->
+		<link rel="stylesheet" href="my_css/style.css">
+		<link rel="stylesheet" href="my_css/text.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="reveal/plugin/highlight/monokai.css">
+
+  </head>
+  <body bgcolor="rgb(26, 82, 118)">
+
+<div class="reveal">
+	<div class="slides">
+
+<!-- Slides begin -->
+
+<section data-background-color="rgb(26, 82, 118)" data-auto-animate>
+<h2 style="color:white"><b>Emmanuel</b> Norambuena</h2>
+</section>
+
+<section data-background-color="rgb(26, 82, 118)" data-auto-animate>
+<h2 style="color:white"><b>Emmanuel</b> Norambuena</h2>
+<h3 style="color:white">OSS Developer</h3>
+</section>
+
+<section data-background-color="rgb(26, 82, 118)">
+<h3 style="color:white">Natural Quantum Script</h3>
+<pre><code data-line-numbers="1|2-4|5">q0  q1
+X
+H
+.---X
+c1
+</code></pre>
+</section>
+
+<section data-background-color="rgb(26, 82, 118)" data-auto-animate>
+<h2 style="color:white"><b>Emmanuel</b> Norambuena</h2>
+</section>
+
+<section data-background-color="rgb(26, 82, 118)" data-auto-animate>
+<h2 style="color:white"><b>Emmanuel</b> Norambuena</h2>
+<h3 style="color:white">OSS Developer</h3>
+</section>
+
+<section data-background-color="rgb(26, 82, 118)" data-auto-animate>
+<h2 style="color:white"><b>Emmanuel</b> Norambuena</h2>
+<h3 style="color:white">OSS Developer</h3>
+</section>
+
+<section data-background-color="rgb(26, 82, 118)">
+<p style="color:white">
+We are using Node.js <span id="node-version"></span>,
+Chromium <span id="chrome-version"></span>,
+and Electron <span id="electron-version"></span>.
+</p></section>
+
+<!-- Slides end -->
+
+</div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+	// More info about initialization & config:
+	// - https://revealjs.com/initialization/
+	// - https://revealjs.com/config/
+	Reveal.initialize({
+		hash: true,
+
+		// Learn about plugins: https://revealjs.com/plugins/
+		plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+	});
+</script>
+
+<!-- You can also require other files to run in this process -->
+<script src="./renderer.js"></script>
+
   </body>
 </html>

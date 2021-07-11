@@ -1,0 +1,23 @@
+.center-text{
+    text-align: center;
+  }
+    
+  .indent-text{
+    text-indent: 3em;
+  }
+  
+  .space-text{
+    letter-spacing: 0.25em;
+  }
+  
+  .uppercase{
+    text-transform: uppercase;
+  }
+    
+  .lowercase{
+    text-transform: lowercase;
+  }
+    
+  .capitalize{
+    text-transform: capitalize;
+  }
