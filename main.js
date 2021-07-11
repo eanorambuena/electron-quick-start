@@ -12,6 +12,13 @@ function createWindow () {
     }
   })
 
+  // Open a web page in the window
+  // mainWindow.loadURL('https://github.com')
+
+  // Print a log
+  //const contents = mainWindow.webContents
+  // console.log(contents)
+
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
 
@@ -39,5 +46,29 @@ app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit()
 })
 
+// En Windows 10, se debe instalar un acceso directo a tu app en el menú de
+// inicio con la ID del modelo de usuario de la aplicación. Esto puede ser anulado
+// durante el desarrollo, por lo que añadir node_modules\electron\dist\electron.exe
+// a su Menú Inicio también hace el truco . Navegue al archivo en Explorer, haga clic
+// derecho y "Anclar para iniciar el menú". Luego necesitará añadir la línea
+// app.setAppUserModelId(process.execPath) a su proceso principal para ver las notificaciones.
+app.setAppUserModelId(process.execPath)
+
+// const { getDoNotDisturb } from 'electron-notification-state'
+// On Windows, logs `true` if "quiet hours" are enabled
+// On macOS, logs `true` if "do not disturb" is enabled
+// console.log(getDoNotDisturb());
+
+
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+const { Notification } = require('electron')
+
+const NOTIFICATION_TITLE = 'Basic Notification'
+const NOTIFICATION_BODY = 'Notification from the Main process'
+
+function showNotification () {
+  new Notification({ title: NOTIFICATION_TITLE, body: NOTIFICATION_BODY }).show()
+}
+
+app.whenReady().then(createWindow).then(showNotification)

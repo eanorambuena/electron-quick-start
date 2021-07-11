@@ -1,7 +1,7 @@
 {
-  "name": "Pyfoch Egg",
+  "name": "egg",
   "version": "1.0.0",
-  "description": "An Egg-based NQS Editor",
+  "description": "An NQS Editor",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
@@ -17,6 +17,7 @@
   "author": "Emmanuel Norambuena",
   "license": "MIT",
   "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.57",
     "electron": "^13.1.6"
   }
 }
